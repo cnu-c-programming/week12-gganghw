@@ -7,9 +7,12 @@ int main(int argc, const char* argv[]) {
 
     FILE* fp = fopen(argv[1], "r");
     const char* target_str = argv[2];
-
-
-    
+    char buffer[256] = {0};
+    while(fgets(buffer, sizeof(buffer), fp) != NULL){
+        if (strstr(buffer, argv[2]) != NULL) {
+            printf("%s", buffer);
+        }
+    }
     fclose(fp);
 }
 

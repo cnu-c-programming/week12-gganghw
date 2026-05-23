@@ -1,0 +1,4 @@
+kang 30
+lee 30
+han 10
+kim 10
